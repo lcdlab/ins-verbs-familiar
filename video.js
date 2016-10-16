@@ -1,5 +1,5 @@
-var dropbox_token = 'Etur5ZuhSLAAAAAAAAAACXuBbWEGRv2fium_bRE73AXbYlLO5BqYY0ag4tKaKD_K';
-var dropbox_key = '7d6n7080mlkfz34';
+var dropbox_token = 'Etur5ZuhSLAAAAAAAAAAIfO6MYYB-fTegbapzAptHaq_gI2GhxIgCACPU3dwviLz';
+var dropbox_key = 't9j4eonz6dava8g';
 
 var normalpause = 1000;
 
