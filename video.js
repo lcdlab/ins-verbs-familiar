@@ -454,7 +454,7 @@ function run_all_trials() {
 	// video.addEventListener('ended', function() {show_choices(current_trial, target_side);});
 
 	$('#video').on('click touchstart', function(event){
-		video.webkitEnterFullscreen();
+		//video.webkitEnterFullscreen();
 		start_time = (new Date()).getTime();
 		video.play();
 		
