@@ -32,9 +32,9 @@ var trials = [
 var training_trials = [
 	{"trial_id": "a",
 		"video": "videos/lo/intro_lo.m4v",
-		"target_pic": "images/instruments/dot_smiley.jpg",
-		"foil_pic": "images/substances/dot_1.png",
-		"trial_type": "critical",
+		"target_pic": "images/dots/dot_smiley.jpg",
+		"foil_pic": "images/dots/dot_1.png",
+		"trial_type": "training",
 		"question_length": "5000",
 	},
 ];
