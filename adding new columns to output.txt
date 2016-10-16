@@ -1,3 +1,6 @@
+Video Processing
+	Note that you want to minimize the size of the video files. We use Handbrake
+
 Data needed for each trial:
 
 	"trial_id": unique ID for the trial
