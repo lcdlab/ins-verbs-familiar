@@ -492,90 +492,92 @@ function run_all_trials() {
 			
 			// Add a brief pause for feedback at the end of each trial
 			if (current_trial['trial_id']=='book_WE_feedback'){
-			   setTimeout(console.log('choice made, give feedback'),10000);
+			var feedbacktime = 10000;
 			} else{
-				setTimeout(console.log('choice made'),10000);
+			var feedbacktime = 3000;
 			}
 			
-			$('#left').fadeOut();
-			$('#right').fadeOut();
+			setTimeout(function(){		
+				$('#left').fadeOut();
+				$('#right').fadeOut();
 			
-			if (response === target_side) {
-				data.accuracy = 1;
-			} else {
-				data.accuracy = 0;
-			}
-
-			data.rt = (new Date()).getTime() - start_time - (video.duration*1000);
-
-			if (start_time === -1) {
-				data.rt = -1;
-			}
-
-			data.trial_number = counter;
-			data.trial_id = current_trial['trial_id'];
-			data.target_side = target_side;
-			data.trial_type = current_trial['trial_type'];
-			
-			if (target_side === 'left') {
-				data.foil_side = 'right'
-			} else {
-				data.foil_side = 'left'
-			}
-
-			data.side_chosen = response;
-
-			processOneRow();
-			upload_to_dropbox();
-			// Uploads to dropbox incrementally, row by row, after each trial.
-
-			data.rt = -1;
-			start_time = -1;
-
-			//put all the data saving stuff here...
-
-
-			trials.splice(0, 1);
-			counterbalance_list.splice(0, 1);
-			counter++;
-			// Pop off the trial/counterbalance we just used and update trial counter.
-
-			setTimeout(function() {
-				$("#stage").fadeOut();
-
-				if (counter === number_of_trials + 1) {
-					end();
-					return;
+				if (response === target_side) {
+					data.accuracy = 1;
+				} else {
+					data.accuracy = 0;
 				}
+
+				data.rt = (new Date()).getTime() - start_time - (video.duration*1000);
+
+				if (start_time === -1) {
+					data.rt = -1;
+				}
+
+				data.trial_number = counter;
+				data.trial_id = current_trial['trial_id'];
+				data.target_side = target_side;
+				data.trial_type = current_trial['trial_type'];
+			
+				if (target_side === 'left') {
+					data.foil_side = 'right'
+				} else {
+					data.foil_side = 'left'
+				}
+
+				data.side_chosen = response;
+
+				processOneRow();
+				upload_to_dropbox();
+				// Uploads to dropbox incrementally, row by row, after each trial.
+
+				data.rt = -1;
+				start_time = -1;
+
+				//put all the data saving stuff here...
+
+
+				trials.splice(0, 1);
+				counterbalance_list.splice(0, 1);
+				counter++;
+				// Pop off the trial/counterbalance we just used and update trial counter.
+
+				setTimeout(function() {
+					$("#stage").fadeOut();
+
+					if (counter === number_of_trials + 1) {
+						end();
+						return;
+					}
 				
-				setTimeout(function(){
+					setTimeout(function(){
 
-						current_trial = trials[0];
-						console.log(current_trial);
-						// Get new trial
-						target_side = counterbalance_list[0];
-						// Get next side to use
+							current_trial = trials[0];
+							console.log(current_trial);
+							// Get new trial
+							target_side = counterbalance_list[0];
+							// Get next side to use
 
-						$("#video").attr("src", current_trial["video"]);
+							$("#video").attr("src", current_trial["video"]);
 
-						show_choices(current_trial, target_side);
+							show_choices(current_trial, target_side);
 
-						$('#left').hide();
-						$('#right').hide();
+							$('#left').hide();
+							$('#right').hide();
 
 
 
-						start_time = (new Date()).getTime();
-						$("#stage").fadeIn();
-						clickDisabled = false
+							start_time = (new Date()).getTime();
+							$("#stage").fadeIn();
+							clickDisabled = false
+					},
+						normalpause);
 				},
-					normalpause);
-			},
-				timeafterClick);
-		} else {
-			console.log('clicking disabled on choice images as choice already made');
-		}
-	});
+					timeafterClick);
+			} else {
+				console.log('clicking disabled on choice images as choice already made');
+			}
+		});
+	},feedbacktime);
 }
 
 showSlide("new_subject");
