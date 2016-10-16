@@ -472,7 +472,7 @@ function run_all_trials() {
 
 			t.fadeIn();
 			f.fadeIn();
-		}, video.duration*1000  - 1000);
+		}, video.duration*1000  + 500);
 
 		setTimeout(close_fullscreen, video.duration*1000 - current_trial['question_length']);
 	})
