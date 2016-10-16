@@ -51,7 +51,7 @@ var training_trials = [
 		"trial_type": "training",
 		"question_length": "13000",
 	},
-	{"trial_id": "book_WE",
+	{"trial_id": "book_WE_feedback",
 		"video": "videos/intro_lo.mp4",
 		"target_pic": "images/warmupimages/book.jpeg",
 		"foil_pic": "images/warmupimages/kidschair.jpg",

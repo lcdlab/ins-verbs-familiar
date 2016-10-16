@@ -489,7 +489,14 @@ function run_all_trials() {
 			var response = $(this).attr('id');
 
 			$(this).effect('bounce', {'times':6, 'distance':200}, 1000);
-
+			
+			// Add a brief pause for feedback at the end of each trial
+			if (current_trial['trial_id']==book_WE_feedback){
+			   setTimeout(console.log('choice made, give feedback'),3000)
+			} else{
+				setTimeout(console.log('choice made'),1000)
+			}
+			
 			$('#left').fadeOut();
 			$('#right').fadeOut();
 			
