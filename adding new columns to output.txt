@@ -1,0 +1,163 @@
+Data needed for each trial:
+
+	"trial_id": unique ID for the trial
+	"video": location of the video for the trial e.g. "videos/vid3.jpg"
+	"target_pic": location of the target picture e.g. "pics/2.png",
+	"foil_pic": location of the foil picture e.g.  "pics/1.png",
+	"trial_type": type of trial e.g. "critical" or "training" or "filler" etc
+	"question_length": the number of milliseconds which the question phase at the end of the video lasts e.g. "5000",
+
+Additional items can be added but to have them saved to the CSV file in the Dropbox, you will need to:
+
+1) Update the var named "results"
+2) Update the $('.choice').on('click touchstart') part of the run_all_trials() function, such that the var "data" has subitems added based on the new items added to each trial in the trial.js file
+3) Update the var named "dataforRound" in the function processOneRow(). Make sure it is BEFORE processOneRow() is called.
+
+
+For example, if you want to add an item like "verb" for each trial, look at the lines here marked with !=>
+
+
+
+1) var results = ["subject_id",
+	"trial_number",
+	"trial_id",
+	"target_side",
+	"foil_side",
+	"trial_type",
+	"date_stamp",
+	"time_stamp",
+	"side_chosen",
+	"accuracy",
+	'rt',
+	"date_of_birth",
+	"ethnicity",
+	"native_lang",
+	"other_langs",
+	"parental_occ",
+	"dev_info",
+	"birth_order",
+	"num_siblings",
+!=>	"verb\n"].join(seperator = [","]);
+
+(Final item in results MUST end in '\n' to make a newline on the CSV header!)
+
+
+2) 	$('.choice').on('click touchstart', function(event){
+		if (clickDisabled === false) {
+			clickDisabled = true;
+			
+			var response = $(this).attr('id');
+
+			$(this).effect('bounce', {'times':6, 'distance':200}, 1000);
+
+			$('#left').fadeOut();
+			$('#right').fadeOut();
+			
+			if (response === target_side) {
+				data.accuracy = 1;
+			} else {
+				data.accuracy = 0;
+			}
+
+			data.rt = (new Date()).getTime() - start_time - (video.duration*1000);
+
+			if (start_time === -1) {
+				data.rt = -1;
+			}
+
+			data.trial_number = counter;
+			data.trial_id = current_trial['trial_id'];
+			data.target_side = target_side;
+			data.trial_type = current_trial['trial_type'];
+			
+			if (target_side === 'left') {
+				data.foil_side = 'right'
+			} else {
+				data.foil_side = 'left'
+			}
+
+			data.side_chosen = response;
+!=>			data.verb = current_trial['verb'];
+
+			processOneRow();
+			upload_to_dropbox();
+			// Uploads to dropbox incrementally, row by row, after each trial.
+
+			data.rt = -1;
+			start_time = -1;
+
+			//put all the data saving stuff here...
+
+
+			trials.splice(0, 1);
+			counterbalance_list.splice(0, 1);
+			counter++;
+			// Pop off the trial/counterbalance we just used and update trial counter.
+
+			setTimeout(function() {
+				$("#stage").fadeOut();
+
+				if (counter === number_of_trials + 1) {
+					end();
+					return;
+				}
+				
+				setTimeout(function(){
+
+						current_trial = trials[0];
+						console.log(current_trial);
+						// Get new trial
+						target_side = counterbalance_list[0];
+						// Get next side to use
+
+						$("#video").attr("src", current_trial["video"]);
+
+						show_choices(current_trial, target_side);
+
+						$('#left').hide();
+						$('#right').hide();
+
+
+
+						start_time = (new Date()).getTime();
+						$("#stage").fadeIn();
+						clickDisabled = false
+				},
+					normalpause);
+			},
+				timeafterClick);
+		} else {
+			console.log('clicking disabled on choice images as choice already made');
+		}
+	});
+
+
+3) function processOneRow() {
+	var dataforRound = data.subject_id + ","
+	+ data.trial_number + ","
+	+ data.trial_id + ","
+	+ data.target_side + ","
+	+ data.foil_side + ","
+	+ data.trial_type + ","
+	+ data.date_stamp + ","
+	+ data.time_stamp + ","
+	+ data.side_chosen + ","
+	+ data.accuracy + ","
+	+ data.rt + ","
+	+ data.date_of_birth + ","
+	+ data.ethnicity + ","
+ 	+ data.native_lang + ","
+ 	+ data.other_langs + ","
+ 	+ data.parental_occ + ","
+ 	+ data.dev_info + ","
+ 	+ data.birth_order + ","
+ 	+ data.num_siblings + ","
+!=> + data.verb + "\n";
+
+	results += dataforRound;	
+}
+
+
+
+
+

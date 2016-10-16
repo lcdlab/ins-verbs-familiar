@@ -1,0 +1,102 @@
+body {
+	margin: 0;
+	font-size: 14px;
+	line-height: 15px;
+}
+
+#top_container {
+	height:360px;
+	top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#video {
+	margin-top: 5px;
+	left: 192px;
+
+	height: 360px;
+	width: 640px;
+}
+
+#play_button {
+	margin-top:100px;
+	width:200px;
+}
+
+#options_container {
+	bottom: 0;
+}
+
+#left {
+	float: left;
+	margin-top: 5px;
+	width: 360px;
+}
+
+#right {
+	float:right;
+	margin-top: 5px;
+	width: 360px;
+}
+
+.col-xs-6 {
+	padding-top: 150px;
+	padding-left: 70px;
+}
+	
+.col-xs-4 {
+	padding-top: 200px;
+	height: 100%;
+	background: #041E42;
+}
+
+.btn {
+	background: #041E42;
+	color: white;
+	border-radius: 0;
+}
+
+.form-control {
+	width:auto;
+	display:inline-block;
+	border-radius: 0;
+}
+
+.input-group {
+	width: 357px;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn:active, .btn:hover{
+	background: #041E42;
+	color: white;
+}
+
+.slide {
+	width: 100%;
+	height: 100%;
+	display: none;
+	position: absolute;
+}
+
+.button-container {
+	width:50%;
+	height:50%;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.btn-contained {
+	font-size: 20px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 100px;
+	transform: translate(-50%, -50%);	
+}
+
