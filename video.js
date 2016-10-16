@@ -472,9 +472,9 @@ function run_all_trials() {
 
 			t.fadeIn();
 			f.fadeIn();
-		}, video.duration*1000  + 500);
+		}, current_trial['question_length']);//video.duration*1000  + 500);
 
-		setTimeout(close_fullscreen, video.duration*1000 - current_trial['question_length']);
+		//setTimeout(close_fullscreen, video.duration*1000 - current_trial['question_length']);
 	})
 	// This will drop the video out of fullscreen in time for the question at the end.
 	// This means that the question is given at the same time as being able to see the options.
