@@ -465,7 +465,7 @@ function run_all_trials() {
 			t = $('#right');
 			f = $('#left');			
 		}
-
+        console.log(video.duration);
 		setTimeout(function(){
 			t.attr('src', current_trial['target_pic']);
 			f.attr('src', current_trial['foil_pic']);
