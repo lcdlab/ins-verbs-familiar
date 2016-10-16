@@ -573,11 +573,11 @@ function run_all_trials() {
 						normalpause);
 				},
 					timeafterClick);
-			} else {
-				console.log('clicking disabled on choice images as choice already made');
-			}
-		});
-	},feedbacktime);
+			},feedbacktime);
+		} else {
+			console.log('clicking disabled on choice images as choice already made');
+		}
+	});	
 }
 
 showSlide("new_subject");
