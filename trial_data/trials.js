@@ -21,7 +21,7 @@ var trials = [
 		"question_length": "5000",
 	},
 	{"trial_id": "2",
-		"video": "videos/lo/scoop_lo.m4v",
+		"video": "videos/lo/scoop_lo.mp4",
 		"target_pic": "images/instruments/Scoop1.png",
 		"foil_pic": "images/substances/GroundCoffee1.jpg",
 		"trial_type": "critical",
@@ -31,7 +31,7 @@ var trials = [
 
 var training_trials = [
 	{"trial_id": "a",
-		"video": "videos/lo/intro_lo.m4v",
+		"video": "videos/lo/intro_lo.mp4",
 		"target_pic": "images/dots/dot_smiley.jpg",
 		"foil_pic": "images/dots/dot_1.png",
 		"trial_type": "training",
