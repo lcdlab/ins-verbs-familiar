@@ -31,7 +31,7 @@ var trials = [
 
 var training_trials = [
 	{"trial_id": "a",
-		"video": "videos/lo/intro_lo.mp4",
+		"video": "videos/intro_lo.mp4",
 		"target_pic": "images/dots/dot_smiley.jpg",
 		"foil_pic": "images/dots/dot_1.png",
 		"trial_type": "training",
