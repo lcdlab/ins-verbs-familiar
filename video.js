@@ -500,9 +500,10 @@ function run_all_trials() {
 					var feedbacktime = 6000;
 					} else {
 					var feedbacktime = 4000;
-			} else{
+					}
+			} else {
 				var feedbacktime = 2000;
-			}
+				}
 			
 			setTimeout(function(){		
 				$('#left').fadeOut();
