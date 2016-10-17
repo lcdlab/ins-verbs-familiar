@@ -33,13 +33,13 @@ body {
 #left {
 	float: left;
 	margin-top: 5px;
-	width: 360px;
+	width: 260px;
 }
 
 #right {
 	float:right;
 	margin-top: 5px;
-	width: 360px;
+	width: 260px;
 }
 
 .col-xs-6 {
