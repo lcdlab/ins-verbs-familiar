@@ -33,12 +33,14 @@ body {
 #left {
 	float: left;
 	margin-top: 5px;
+	margin-left: 5px;
 	width: 260px;
 }
 
 #right {
 	float:right;
 	margin-top: 5px;
+	margin-right: 5px;
 	width: 260px;
 }
 
