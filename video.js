@@ -489,23 +489,26 @@ function run_all_trials() {
 			var response = $(this).attr('id');
 
 			$(this).effect('bounce', {'times':6, 'distance':200}, 1000);
-			
+			if (response === target_side) {
+				data.accuracy = 1;
+			} else {
+				data.accuracy = 0;
+			}			
 			// Add a brief pause for feedback at the end of each trial
 			if (current_trial['trial_id']=='book_WE_feedback'){
-			var feedbacktime = 10000;
+				if (data.accuracy == 0){
+					var feedbacktime = 6000;
+					} else {
+					var feedbacktime = 4000;
 			} else{
-			var feedbacktime = 3000;
+				var feedbacktime = 2000;
 			}
 			
 			setTimeout(function(){		
 				$('#left').fadeOut();
 				$('#right').fadeOut();
 			
-				if (response === target_side) {
-					data.accuracy = 1;
-				} else {
-					data.accuracy = 0;
-				}
+
 
 				data.rt = (new Date()).getTime() - start_time - (video.duration*1000);
 

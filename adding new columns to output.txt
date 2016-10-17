@@ -1,5 +1,5 @@
 Video Processing
-	Note that you want to minimize the size of the video files. We use Handbrake
+	Note that you want to minimize the size of the video files. We use Handbrake to do that. When you do this, make sure that the picture settings have ZERO margin on each side, otherwise Handbrake will crop the top of the video.
 
 Data needed for each trial:
 
