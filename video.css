@@ -86,6 +86,7 @@ body {
 	display: none;
 	position: absolute;
 	background-color: lightgrey;
+	z-index:-99;
 }
 
 .button-container {
