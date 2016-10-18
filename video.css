@@ -2,7 +2,6 @@ body {
 	margin: 0;
 	font-size: 14px;
 	line-height: 15px;
-	background-color: lightgrey;
 }
 
 #top_container {
@@ -12,6 +11,7 @@ body {
     left: 0;
     right: 0;
     margin: auto;
+	background-color: lightgrey;
 }
 
 #video {
@@ -38,6 +38,8 @@ body {
 
 #options_container {
 	bottom: 0;
+	background-color: lightgrey;
+
 }
 
 #left {
