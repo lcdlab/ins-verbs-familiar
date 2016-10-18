@@ -14,6 +14,7 @@ body {
 }
 
 #video {
+    position:absolute;
 	margin-top: 5px;
 	left: 0px;/*192px;*/
 
@@ -26,6 +27,7 @@ body {
     right:50px;
     background:#000;
     color:#FFF;
+    z-index:99;
 }
 #play_button {
 	margin-top:100px;
