@@ -20,7 +20,13 @@ body {
 	height: 576px;/*360px;*/
 	width: 1024px;/*640px;*/
 }
-
+.video-overlay {
+    position:absolute;
+    top:50px;
+    right:50px;
+    background:#000;
+    color:#FFF;
+}
 #play_button {
 	margin-top:100px;
 	width:200px;

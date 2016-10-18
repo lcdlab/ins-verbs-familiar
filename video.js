@@ -406,16 +406,20 @@ function show_choices(current_trial, target_side) {
 	if (target_side === 'left') {
 			t = $('#left');
 			f = $('#right');
+			toverlay = $('#video-overlay');
 		} else {
 			t = $('#right');
-			f = $('#left');			
+			f = $('#left');
+			toverlay = $('#video-overlay');			
 		}
 
 	t.attr('src', current_trial['target_pic']);
 	f.attr('src', current_trial['foil_pic']);
+	toverlay.attr('src', current_trial['target_pic']);
 
 	t.fadeIn();
 	f.fadeIn();
+	toverlay.fadeIn();
 }
 
 
