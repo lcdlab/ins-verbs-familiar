@@ -509,7 +509,7 @@ function run_all_trials() {
 			setTimeout(function(){		
 				$('#left').fadeOut();
 				$('#right').fadeOut();
-			
+			    $('#video').css("z-index", "99");
 
 
 				data.rt = (new Date()).getTime() - start_time - (video.duration*1000);
