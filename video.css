@@ -11,8 +11,8 @@ body {
     left: 0;
     right: 0;
     margin: auto;
-	background-color: lightgrey;
-	z-index:-2;
+	/*background-color: lightgrey;
+	z-index:-2;*/
 }
 
 #video {
