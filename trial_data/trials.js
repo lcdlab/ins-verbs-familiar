@@ -63,6 +63,6 @@ var training_trials = [
 		"target_pic": "images/dots/dot_smiley.jpg",
 		"foil_pic": "images/dots/dot_1.png",
 		"trial_type": "training",
-		"question_length": "13000",
+		"question_length": "5000",
 	},
 ];
