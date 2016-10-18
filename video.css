@@ -22,7 +22,7 @@ body {
 
 	height: 576px;/*360px;*/
 	width: 1024px;/*640px;*/
-	z-index:99;
+	z-index:98;
 }
 
 #play_button {
@@ -86,7 +86,6 @@ body {
 	display: none;
 	position: absolute;
 	background-color: lightgrey;
-	z-index:-99;
 }
 
 .button-container {

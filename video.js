@@ -467,7 +467,9 @@ function run_all_trials() {
 		}
         console.log(video.duration);
 		setTimeout(function(){
-		    $('#video').css("z-index", "-1");
+		    //$('#video').css("z-index", "-1");
+		    $('#left').css("z-index", "99");
+		    $('#right').css("z-index", "99");
 			t.attr('src', current_trial['target_pic']);
 			f.attr('src', current_trial['foil_pic']);
 
@@ -509,7 +511,7 @@ function run_all_trials() {
 			setTimeout(function(){		
 				$('#left').fadeOut();
 				$('#right').fadeOut();
-			    $('#video').css("z-index", "99");
+			    //$('#video').css("z-index", "99");
 
 
 				data.rt = (new Date()).getTime() - start_time - (video.duration*1000);
