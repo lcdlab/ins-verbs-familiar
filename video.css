@@ -15,10 +15,10 @@ body {
 
 #video {
 	margin-top: 5px;
-	left: 192px;
+	left: 0px;/*192px;*/
 
-	height: 360px;
-	width: 640px;
+	height: 576px;/*360px;*/
+	width: 1024px;/*640px;*/
 }
 
 #play_button {
