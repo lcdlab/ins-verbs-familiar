@@ -20,7 +20,7 @@ body {
 
 	height: 576px;/*360px;*/
 	width: 1024px;/*640px;*/
-	/*z-index:-1;/*
+	/*z-index:-1;*/
 }
 .video-overlay {
     position:absolute;
