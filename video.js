@@ -475,7 +475,6 @@ function run_all_trials() {
 
 			t.fadeIn();
 			f.fadeIn();
-			video.fadeOut();
 		}, current_trial['question_length']);//video.duration*1000  + 500);
 
 		//setTimeout(close_fullscreen, video.duration*1000 - current_trial['question_length']);
