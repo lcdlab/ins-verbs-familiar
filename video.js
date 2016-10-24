@@ -468,9 +468,9 @@ function run_all_trials() {
         console.log(video.duration);
 		setTimeout(function(){
 			$("#stage").fadeIn(800); // maybe need to take this out
-		    $('#video').css("z-index", "-1");
-		    $('#left').css("z-index", "99");
-		    $('#right').css("z-index", "99");
+		    $('#video').fadeIn();//css("z-index", "-1");
+		    $('#left').fadeIn();//.css("z-index", "99");
+		    $('#right').fadeIn();//.css("z-index", "99");
 			t.attr('src', current_trial['target_pic']);
 			f.attr('src', current_trial['foil_pic']);
 			
