@@ -56,7 +56,7 @@ var training_trials = [
 		"target_pic": "images/warmupimages/book.jpeg",
 		"foil_pic": "images/warmupimages/kidschair.jpg",
 		"trial_type": "training",
-		"question_length": "11000",
+		"question_length": "9000",
 	},
 	{"trial_id": "intro",
 		"video": "videos/intro_lo.mp4",
