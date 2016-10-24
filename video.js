@@ -574,9 +574,11 @@ function run_all_trials() {
 							$('#video').css("z-index", "-1");
 						    $('#left').css("z-index", "99");
 				    		$('#right').css("z-index", "99");
+							
 
 
 							start_time = (new Date()).getTime();
+							$('#video').fadeIn();//css("z-index", "-1");
 							$("#stage").fadeIn();
 							clickDisabled = false
 					},
