@@ -467,8 +467,8 @@ function run_all_trials() {
 		}
         console.log(video.duration);
 		setTimeout(function(){
-			$("#stage").fadeIn(800); // maybe need to take this out
-		    $('#video').fadeOut();//css("z-index", "-1");
+			$('#video').fadeOut(200);//css("z-index", "-1");
+			$("#stage").fadeIn(); // maybe need to take this out
 		    $('#left').fadeIn();//.css("z-index", "99");
 		    $('#right').fadeIn();//.css("z-index", "99");
 			t.attr('src', current_trial['target_pic']);
@@ -571,7 +571,7 @@ function run_all_trials() {
 
 							$('#left').hide();
 							$('#right').hide();
-
+							$('#video').css("z-index", "-1");
 
 
 							start_time = (new Date()).getTime();
