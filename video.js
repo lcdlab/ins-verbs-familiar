@@ -389,11 +389,15 @@ function set_up_trial_list() {
 
 	// Shuffles the array of critical trials
 	
+	// Add filler trials at point 
+	trials.splice(2,0,filler_trials[0]);
+	trials.splice(4,0,filler_trials[1]);
 	// Add the training trials to main list of trials 
 
 	for (var item of training_trials) {
 		trials.splice(0,0,item);
 	}
+	console.log(trials);
 	// Makes sure that the training trials always happen first. They won't be shuffled in with the
 	// others but they will be in backwards order to what they are in the .json file,
 	// though that should not matter.

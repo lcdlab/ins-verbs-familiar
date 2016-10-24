@@ -66,3 +66,20 @@ var training_trials = [
 		"question_length": "13000",
 	},
 ];
+
+var filler_trials = [
+	{"trial_id": "apple_WE",
+		"video": "videos/intro_lo.mp4",
+		"target_pic": "images/warmupimages/applealpha.png",
+		"foil_pic": "images/warmupimages/table.jpg",
+		"trial_type": "training",
+		"question_length": "13000",
+	},
+	{"trial_id": "cup_WE",
+		"video": "videos/intro_lo.mp4",
+		"target_pic": "images/warmupimages/bluecup.jpg",
+		"foil_pic": "images/warmupimages/sportyshoe.jpg",
+		"trial_type": "training",
+		"question_length": "13000",
+	},
+];
