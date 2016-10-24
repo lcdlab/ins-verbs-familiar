@@ -467,7 +467,7 @@ function run_all_trials() {
 		}
         console.log(video.duration);
 		setTimeout(function(){
-			$('#video').fadeOut(200);//css("z-index", "-1");
+			$('#video').fadeOut(400);//css("z-index", "-1");
 			$("#stage").fadeIn(); // maybe need to take this out
 		    $('#left').fadeIn();//.css("z-index", "99");
 		    $('#right').fadeIn();//.css("z-index", "99");
