@@ -551,7 +551,7 @@ function run_all_trials() {
 
 				setTimeout(function() {
 					$("#stage").fadeOut();
-					$('#video').css("z-index", "99");
+					//$('#video').css("z-index", "99");
 					if (counter === number_of_trials + 1) {
 						end();
 						return;
@@ -571,9 +571,9 @@ function run_all_trials() {
 
 							$('#left').hide();
 							$('#right').hide();
-							$('#video').css("z-index", "-1");
-						    $('#left').css("z-index", "99");
-				    		$('#right').css("z-index", "99");
+						//	$('#video').css("z-index", "-1");
+						//    $('#left').css("z-index", "99");
+				    	//	$('#right').css("z-index", "99");
 							
 
 
