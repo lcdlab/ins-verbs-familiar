@@ -470,7 +470,7 @@ function run_all_trials() {
 			f = $('#left');			
 		}
         console.log(video.duration);
-        while (video.currentTime < current_trial['question_length']){
+        while (video.currentTime < (current_trial['question_length']/1000)){
         }
 		//setTimeout(function(){
 			$('#video').fadeOut(600);//css("z-index", "-1");
