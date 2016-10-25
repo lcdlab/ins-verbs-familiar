@@ -470,7 +470,7 @@ function run_all_trials() {
 			f = $('#left');			
 		}
         console.log(video.duration);
-        while (video.currentTime < (current_trial['question_length']){
+        while (video.currentTime < (current_trial['question_length'])){
         console.log(video.currentTime);
         }
 		//setTimeout(function(){
