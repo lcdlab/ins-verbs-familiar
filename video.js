@@ -476,8 +476,6 @@ function run_all_trials() {
         //}
     	video.addEventListener("timeupdate", function() {
       	 if (this.currentTime >= current_trial['question_length']) {
-      	      
-     	   
 		setTimeout(function(){
 			$('#video').fadeOut(600);//css("z-index", "-1");
 			$("#stage").fadeIn(600); // maybe need to take this out
@@ -503,7 +501,7 @@ function run_all_trials() {
 	$('.choice').on('click touchstart', function(event){
 		if (clickDisabled === false) {
 			clickDisabled = true;
-			
+			video.pause();
 			var response = $(this).attr('id');
 
 			$(this).effect('bounce', {'times':6, 'distance':200}, 1000);
