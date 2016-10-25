@@ -56,7 +56,7 @@ var training_trials = [
 "target_pic": "images/warmupimages/HappyFace3.png",
 "foil_pic": "images/warmupimages/SadFace.png",
 "trial_type": "training",
-"question_length": "11300",
+"question_length": "11.300",
 },
 ];
 
