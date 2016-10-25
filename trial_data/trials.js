@@ -9,7 +9,7 @@ var trials = [
 {"trial_id": "rake_WE",
 "video": "videos/rake_lo.mp4",
 "target_pic": "images/instruments/GreenRake2.png",
-"foil_pic": "images/substances/GreenPotpourri3.png",
+"foil_pic": "images/substances/GreenPotpourri3.jpg",
 "trial_type": "critical",
 "question_length": "24700",
 },
