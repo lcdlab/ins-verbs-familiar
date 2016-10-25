@@ -471,9 +471,9 @@ function run_all_trials() {
 		}
         console.log(video.duration);
         console.log(video.currentTime);
-        while (parseFloat(video.currentTime) < 5.00){//(current_trial['question_length'])){
+        //while (parseFloat(video.currentTime) < 500){//(current_trial['question_length'])){
         
-        }
+        //}
 		setTimeout(function(){
 			$('#video').fadeOut(600);//css("z-index", "-1");
 			$("#stage").fadeIn(600); // maybe need to take this out
@@ -485,7 +485,7 @@ function run_all_trials() {
 			t.fadeIn();
 			f.fadeIn();
 		}, 200);//current_trial['question_length']);//video.duration*1000  + 500);
-
+		console.log(parseFloat(video.currentTime));
 		//setTimeout(close_fullscreen, video.duration*1000 - current_trial['question_length']);
 	})
 	// This will drop the video out of fullscreen in time for the question at the end.
