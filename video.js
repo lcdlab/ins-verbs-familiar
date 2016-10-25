@@ -488,7 +488,7 @@ function run_all_trials() {
 			
 			t.fadeIn();
 			f.fadeIn();
-		}, 200);//current_trial['question_length']);//video.duration*1000  + 500);
+		}, 500);//current_trial['question_length']);//video.duration*1000  + 500);
 		}
   		  }, false);
 		console.log(video.currentTime > 0);
