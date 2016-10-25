@@ -40,6 +40,7 @@ body {
 	margin-top: 5px;
 	margin-left: 5px;
 	width: 260px;
+	height: 260px;
 }
 
 #right {
@@ -48,6 +49,7 @@ body {
 	margin-top: 5px;
 	margin-right: 5px;
 	width: 260px;
+	height: 260px;
 }
 
 .col-xs-6 {
