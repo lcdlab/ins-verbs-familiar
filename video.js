@@ -470,7 +470,9 @@ function run_all_trials() {
 			f = $('#left');			
 		}
         console.log(video.duration);
-		setTimeout(function(){
+        while (video.currentTime < current_trial['question_length']){
+        }
+		//setTimeout(function(){
 			$('#video').fadeOut(600);//css("z-index", "-1");
 			$("#stage").fadeIn(600); // maybe need to take this out
 		    $('#left').fadeIn(600);//.css("z-index", "99");
@@ -480,7 +482,7 @@ function run_all_trials() {
 			
 			t.fadeIn();
 			f.fadeIn();
-		}, current_trial['question_length']);//video.duration*1000  + 500);
+		//}, current_trial['question_length']);//video.duration*1000  + 500);
 
 		//setTimeout(close_fullscreen, video.duration*1000 - current_trial['question_length']);
 	})
