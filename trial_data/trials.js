@@ -52,7 +52,7 @@ var training_trials = [
 "question_length": "9040",
 },
 {"trial_id": "intro",
-"video": "videos/intro_lo.mp4",
+"video": "videos/intro1_lo.mp4",
 "target_pic": "images/warmupimages/HappyFace3.png",
 "foil_pic": "images/warmupimages/SadFace.png",
 "trial_type": "training",
