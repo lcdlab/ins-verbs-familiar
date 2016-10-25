@@ -485,7 +485,7 @@ function run_all_trials() {
 			t.fadeIn();
 			f.fadeIn();
 		}, 200);//current_trial['question_length']);//video.duration*1000  + 500);
-		console.log(video.currentTime > 1);
+		console.log(video.currentTime);
 		//setTimeout(close_fullscreen, video.duration*1000 - current_trial['question_length']);
 	})
 	// This will drop the video out of fullscreen in time for the question at the end.
