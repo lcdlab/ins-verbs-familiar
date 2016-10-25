@@ -470,6 +470,7 @@ function run_all_trials() {
 			f = $('#left');			
 		}
         console.log(video.duration);
+        console.log(video.currentTime);
         while (parseFloat(video.currentTime) < 5.00){//(current_trial['question_length'])){
         
         }
