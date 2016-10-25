@@ -39,8 +39,8 @@ body {
 	float: left;
 	margin-top: 5px;
 	margin-left: 5px;
-	width: 260px;
-	height: 260px;
+	width: 320px;
+	height: 320px;
 }
 
 #right {
@@ -48,8 +48,8 @@ body {
 	float:right;
 	margin-top: 5px;
 	margin-right: 5px;
-	width: 260px;
-	height: 260px;
+	width: 320px;
+	height: 320px;
 }
 
 .col-xs-6 {
