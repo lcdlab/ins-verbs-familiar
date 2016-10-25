@@ -1,4 +1,4 @@
-var test trials = [
+var test_trials = [
 {"trial_id": "brush_WE",
 "video": "videos/brush_lo.mp4",
 "target_pic": "images/instruments/Brush1.png",
