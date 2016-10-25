@@ -471,6 +471,7 @@ function run_all_trials() {
 		}
         console.log(video.duration);
         while (video.currentTime < (current_trial['question_length'])){
+        console.log((current_trial['question_length']));
         console.log(video.currentTime);
         }
 		//setTimeout(function(){
