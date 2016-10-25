@@ -470,11 +470,10 @@ function run_all_trials() {
 			f = $('#left');			
 		}
         console.log(video.duration);
-        while (video.currentTime < (current_trial['question_length'])){
-        console.log((current_trial['question_length']));
-        console.log(video.currentTime);
+        while (video.currentTime < 5.00){//(current_trial['question_length'])){
+        
         }
-		//setTimeout(function(){
+		setTimeout(function(){
 			$('#video').fadeOut(600);//css("z-index", "-1");
 			$("#stage").fadeIn(600); // maybe need to take this out
 		    $('#left').fadeIn(600);//.css("z-index", "99");
@@ -484,7 +483,7 @@ function run_all_trials() {
 			
 			t.fadeIn();
 			f.fadeIn();
-		//}, current_trial['question_length']);//video.duration*1000  + 500);
+		}, 200);//current_trial['question_length']);//video.duration*1000  + 500);
 
 		//setTimeout(close_fullscreen, video.duration*1000 - current_trial['question_length']);
 	})
