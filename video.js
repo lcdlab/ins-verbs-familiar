@@ -88,6 +88,7 @@ var results = ["subject_id",
 	'rt',
 	"country",
 	"testing_loc",
+	"gender",
 	"date_of_birth",
 	"ethnicity",
 	"native_lang",
@@ -194,7 +195,8 @@ function processOneRow() {
 	+ data.accuracy + ","
 	+ data.rt + ","
 	+ data.country + ","
-	+ data.testing_loc + ","	
+	+ data.testing_loc + ","
+	+ data.gender + ","	
 	+ data.date_of_birth + ","
 	+ data.ethnicity + ","
  	+ data.native_lang + ","
