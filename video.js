@@ -193,6 +193,8 @@ function processOneRow() {
 	+ data.side_chosen + ","
 	+ data.accuracy + ","
 	+ data.rt + ","
+	+ data.country + ","
+	+ data.testing_loc + ","	
 	+ data.date_of_birth + ","
 	+ data.ethnicity + ","
  	+ data.native_lang + ","
@@ -320,11 +322,19 @@ function confirm() {
 
 	data.subject_id = document.getElementById("subject_id").value;
 	data.date_of_birth = document.getElementById("date_of_birth").value;
+	data.date_of_birth = document.getElementById("testing_loc").value;
+	
 	if (document.getElementById("gender").checked === true) {
 		data.gender = 'male';
 	}
 	if (document.getElementById("gender").checked === false) {
 		data.gender = 'female';
+	}
+	if (document.getElementById("country").checked === true) {
+		data.gender = 'edinburgh';
+	}
+	if (document.getElementById("country").checked === false) {
+		data.gender = 'berkeley';
 	}
 
 	document.body.style.background = "white";
