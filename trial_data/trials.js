@@ -39,8 +39,8 @@ var trials = [
 var training_trials = [
 {"trial_id": "ball_WE",
 "video": "videos/ball_lo.mp4",
-"target_pic": "images/warmupimages/YellowBall.png",
-"foil_pic": "images/warmupimages/BlueChair.png",
+"target_pic": "images/warmupimages/RedBall.png",
+"foil_pic": "images/warmupimages/BlueHat.png",
 "trial_type": "training",
 "question_length": "7.800",
 },
