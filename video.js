@@ -322,7 +322,7 @@ function confirm() {
 
 	data.subject_id = document.getElementById("subject_id").value;
 	data.date_of_birth = document.getElementById("date_of_birth").value;
-	data.date_of_birth = document.getElementById("testing_loc").value;
+	data.testing_loc = document.getElementById("testing_loc").value;
 	
 	if (document.getElementById("gender").checked === true) {
 		data.gender = 'male';
@@ -331,10 +331,10 @@ function confirm() {
 		data.gender = 'female';
 	}
 	if (document.getElementById("country").checked === true) {
-		data.gender = 'edinburgh';
+		data.country = 'edinburgh';
 	}
 	if (document.getElementById("country").checked === false) {
-		data.gender = 'berkeley';
+		data.country = 'berkeley';
 	}
 
 	document.body.style.background = "white";
