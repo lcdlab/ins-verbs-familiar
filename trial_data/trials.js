@@ -16,7 +16,7 @@ var trials = [
 {"trial_id": "shovel_WE",
 "video": "videos/shovel_lo.mp4",
 "target_pic": "images/instruments/YellowShovel.png",
-"foil_pic": "images/substances/Dirt2.png",
+"foil_pic": "images/substances/SoilPile.png",
 "trial_type": "critical",
 "question_length": "26.040",
 },
