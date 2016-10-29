@@ -449,7 +449,7 @@ function close_fullscreen() {
 
 function run_all_trials() {
 	$('#left').fadeOut(0);//.css("z-index", "99");
-	$('#right').fadeOut(0);//.css("z-index", "99");	
+	$('#right').fadeIn(0);//.css("z-index", "99");	
 	counterbalance_list = set_up_pseudo_counterbalance();
 	set_up_trial_list();
 	// If you run these the other way round, then trial list is edited in place and gives the wrong length
@@ -515,7 +515,18 @@ function run_all_trials() {
 
 	//When a choice is clicked, then record data and move on.
 	$('.choice').on('click touchstart', function(event){
+		if (response === target_side) {
+				data.accuracy = 1;
+			} else {
+				data.accuracy = 0;
+			}	
+		if (current_trial['trial_id']=='book_WE_feedback'){
+				if (data.accuracy == 0){
+		$(this).attr('src', 'images/dots/qu_mark.png');				
+				}
+			} else {
 		$(this).attr('src', 'images/dots/x_trans.png');
+			}
 		if (clickDisabled === false) {
 			clickDisabled = true;
 			video.pause();
@@ -527,11 +538,7 @@ function run_all_trials() {
 			
 			//$(this).effect('bounce', {'times':6, 'distance':200}, 1000);
 			
-			if (response === target_side) {
-				data.accuracy = 1;
-			} else {
-				data.accuracy = 0;
-			}			
+		
 			// Add a brief pause for feedback at the end of each trial
 			if (current_trial['trial_id']=='book_WE_feedback'){
 				if (data.accuracy == 0){
