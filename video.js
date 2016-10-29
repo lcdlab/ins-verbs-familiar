@@ -483,6 +483,9 @@ function run_all_trials() {
 			t = $('#right');
 			f = $('#left');			
 		}
+		t.attr('src', current_trial['target_pic']);
+		f.attr('src', current_trial['foil_pic']);
+			
         console.log(video.duration);
         console.log(video.currentTime);
         //while (parseFloat(video.currentTime) < 500){//(current_trial['question_length'])){
@@ -495,9 +498,7 @@ function run_all_trials() {
 			$("#stage").fadeIn(600); // maybe need to take this out
 		    $('#left').fadeIn(600);//.css("z-index", "99");
 		    $('#right').fadeIn(600);//.css("z-index", "99");
-			t.attr('src', current_trial['target_pic']);
-			f.attr('src', current_trial['foil_pic']);
-			
+
 			t.fadeIn();
 			f.fadeIn();
 		}, 50);//current_trial['question_length']);//video.duration*1000  + 500);
@@ -513,7 +514,7 @@ function run_all_trials() {
 
 	//When a choice is clicked, then record data and move on.
 	$('.choice').on('click touchstart', function(event){
-		$(this).attr('src', 'images/dots/x.png');
+		$(this).attr('src', 'images/dots/x_trans.png');
 		if (clickDisabled === false) {
 			clickDisabled = true;
 			video.pause();
