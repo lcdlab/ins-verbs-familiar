@@ -518,10 +518,11 @@ function run_all_trials() {
 			video.pause();
 			var response = $(this).attr('id');
 			
-			
+	
+			$('.choice').not(this).hide();
 			$(this).attr('src', 'images/dots/x.png');
 			
-			$(this).effect('bounce', {'times':6, 'distance':200}, 1000);
+			//$(this).effect('bounce', {'times':6, 'distance':200}, 1000);
 			
 			if (response === target_side) {
 				data.accuracy = 1;
