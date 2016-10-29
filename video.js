@@ -517,9 +517,12 @@ function run_all_trials() {
 			clickDisabled = true;
 			video.pause();
 			var response = $(this).attr('id');
-
+			
+			
+			$(this).attr('src', "images/dots/x.png");
+			
 			$(this).effect('bounce', {'times':6, 'distance':200}, 1000);
-			$(this).src = "images/dots/x.png";
+			
 			if (response === target_side) {
 				data.accuracy = 1;
 			} else {
