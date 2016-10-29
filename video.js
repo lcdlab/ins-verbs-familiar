@@ -520,7 +520,7 @@ function run_all_trials() {
 			
 	
 			$('.choice').not(this).hide();
-			//$(this).attr('src', 'images/dots/x.png');
+			$(this).attr('src', 'images/dots/x.png');
 			
 			//$(this).effect('bounce', {'times':6, 'distance':200}, 1000);
 			
