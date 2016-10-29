@@ -598,7 +598,7 @@ function run_all_trials() {
 
 							$("#video").attr("src", current_trial["video"]);
 
-							show_choices(current_trial, target_side);
+							//show_choices(current_trial, target_side);
 
 							$('#left').hide();
 							$('#right').hide();
