@@ -41,7 +41,6 @@ body {
 	margin-left: 5px;
 	width: 320px;
 	height: 320px;
-	opacity: 0;
 }
 
 #right {
@@ -51,7 +50,6 @@ body {
 	margin-right: 5px;
 	width: 320px;
 	height: 320px;
-	opacity: 0;
 }
 
 .col-xs-6 {

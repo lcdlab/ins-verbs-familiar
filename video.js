@@ -448,7 +448,8 @@ function close_fullscreen() {
 
 
 function run_all_trials() {
-	
+	$('#left').fadeOut(0);//.css("z-index", "99");
+	$('#right').fadeIn(0);//.css("z-index", "99");	
 	counterbalance_list = set_up_pseudo_counterbalance();
 	set_up_trial_list();
 	// If you run these the other way round, then trial list is edited in place and gives the wrong length
