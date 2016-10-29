@@ -544,8 +544,8 @@ function run_all_trials() {
 				}
 			
 			setTimeout(function(){		
-				$('#left').fadeOut();
-				$('#right').fadeOut();
+				$('#left').hide();
+				$('#right').hide();
 			    
 
 
