@@ -513,13 +513,14 @@ function run_all_trials() {
 
 	//When a choice is clicked, then record data and move on.
 	$('.choice').on('click touchstart', function(event){
+		$(this).attr('src', 'images/dots/x.png');
 		if (clickDisabled === false) {
 			clickDisabled = true;
 			video.pause();
 			var response = $(this).attr('id');
 			
 	
-			$(this).attr('src', 'images/dots/x.png');
+
 			//$('.choice').not(this).hide();
 			
 			//$(this).effect('bounce', {'times':6, 'distance':200}, 1000);
