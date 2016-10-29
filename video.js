@@ -519,6 +519,7 @@ function run_all_trials() {
 			var response = $(this).attr('id');
 
 			$(this).effect('bounce', {'times':6, 'distance':200}, 1000);
+			$(this).src = "images/dots/x.png";
 			if (response === target_side) {
 				data.accuracy = 1;
 			} else {
