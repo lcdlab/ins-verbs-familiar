@@ -519,7 +519,7 @@ function run_all_trials() {
 			var response = $(this).attr('id');
 			
 	
-			$('.choice').not(this).hide();
+			$('.choice').not(this).fadeout(400);
 			$(this).attr('src', 'images/dots/x.png');
 			
 			//$(this).effect('bounce', {'times':6, 'distance':200}, 1000);
