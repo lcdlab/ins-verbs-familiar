@@ -603,7 +603,7 @@ function run_all_trials() {
 					}
 				
 					setTimeout(function(){
-							$(this).css('border', "solid 0px red");  
+							$(this).css('border', "none");  
 							current_trial = trials[0];
 							console.log(current_trial);
 							// Get new trial
