@@ -521,7 +521,9 @@ function run_all_trials() {
 			} else {
 				data.accuracy = 0;
 			}	
-		if (current_trial['trial_id']=='book_WE_feedback'){
+		if (current_trial['trial_id']=='intro'){
+		
+		} else if (current_trial['trial_id']=='book_WE_feedback'){
 				if (data.accuracy == 0){
 		$(this).attr('src', 'images/dots/qu_mark.png');				
 				} else {
