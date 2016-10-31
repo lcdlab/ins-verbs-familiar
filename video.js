@@ -530,7 +530,7 @@ function run_all_trials() {
 			} else {
 		$(this).attr('src', 'images/dots/x_trans.png');
 			}
-		$(this).css('border', "solid 2px red");  
+		$(this).css('border', "solid 6px red");  
 		if (clickDisabled === false) {
 			clickDisabled = true;
 			video.pause();
@@ -603,7 +603,7 @@ function run_all_trials() {
 					}
 				
 					setTimeout(function(){
-
+							$(this).css('border', "solid 0px red");  
 							current_trial = trials[0];
 							console.log(current_trial);
 							// Get new trial
