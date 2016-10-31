@@ -525,10 +525,10 @@ function run_all_trials() {
 				if (data.accuracy == 0){
 		$(this).attr('src', 'images/dots/qu_mark.png');				
 				} else {
-		$(this).attr('src', 'images/dots/x_trans.png');
+		$(this).attr('src', 'images/dots/ElmoFace.png');
 			}
 			} else {
-		$(this).attr('src', 'images/dots/x_trans.png');
+		$(this).attr('src', 'images/dots/ElmoFace.png');
 			}
 		$(this).css('border', "solid 6px red");  
 		if (clickDisabled === false) {
