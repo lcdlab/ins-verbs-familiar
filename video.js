@@ -515,6 +515,7 @@ function run_all_trials() {
 
 	//When a choice is clicked, then record data and move on.
 	$('.choice').on('click touchstart', function(event){
+		var response = $(this).attr('id');
 		if (response === target_side) {
 				data.accuracy = 1;
 			} else {
@@ -533,7 +534,7 @@ function run_all_trials() {
 		if (clickDisabled === false) {
 			clickDisabled = true;
 			video.pause();
-			var response = $(this).attr('id');
+			
 			
 	
 
