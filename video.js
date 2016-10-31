@@ -523,10 +523,13 @@ function run_all_trials() {
 		if (current_trial['trial_id']=='book_WE_feedback'){
 				if (data.accuracy == 0){
 		$(this).attr('src', 'images/dots/qu_mark.png');				
-				}
+				} else {
+		$(this).attr('src', 'images/dots/x_trans.png');
+			}
 			} else {
 		$(this).attr('src', 'images/dots/x_trans.png');
 			}
+		$(this).css('border', "solid 2px red");  
 		if (clickDisabled === false) {
 			clickDisabled = true;
 			video.pause();
