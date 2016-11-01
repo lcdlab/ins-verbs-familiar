@@ -494,12 +494,14 @@ function run_all_trials() {
         //}
     	video.addEventListener("timeupdate", function() {
      	 	$('#video').on('click touchstart', function(event){	
+				if (video.paused ==false){
 				video.pause();
 				video.currentTime = 0;
+				} else {
 				//Avoid the Promise Error
-				setTimeout(function () {      
 				start_time = (new Date()).getTime();
 				video.play();
+				}
 				}, 150);
 
 			})
