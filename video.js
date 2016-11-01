@@ -493,12 +493,12 @@ function run_all_trials() {
         
         //}
     	video.addEventListener("timeupdate", function() {
-      	 if (this.currentTime >= current_trial['question_length']) {
-      	 	$('#video').on('click touchstart', function(event){	
+     	 	$('#video').on('click touchstart', function(event){	
 				video.pause();
 				video.currentTime = 0;
 				video.play();
 			}
+      	 if (this.currentTime >= current_trial['question_length']) {
 		setTimeout(function(){
 			$('#video').fadeOut(600);//css("z-index", "-1");
 			$("#stage").fadeIn(600); // maybe need to take this out
