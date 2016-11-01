@@ -480,7 +480,7 @@ function run_all_trials() {
 			video.pause();
 			video.currentTime = 0;
 			video.load();
-		}
+		})
 		if (target_side === 'left') {
 			t = $('#left');
 			f = $('#right');
