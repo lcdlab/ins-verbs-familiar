@@ -476,11 +476,7 @@ function run_all_trials() {
 		//video.webkitEnterFullscreen();
 		start_time = (new Date()).getTime();
 		video.play();
-		$('#video').on('click touchstart', function(event){	
-			video.pause();
-			video.currentTime = 0;
-			video.load();
-		})
+
 		if (target_side === 'left') {
 			t = $('#left');
 			f = $('#right');
@@ -498,6 +494,11 @@ function run_all_trials() {
         //}
     	video.addEventListener("timeupdate", function() {
       	 if (this.currentTime >= current_trial['question_length']) {
+      	 	$('#video').on('click touchstart', function(event){	
+				video.pause();
+				video.currentTime = 0;
+				video.play();
+			}
 		setTimeout(function(){
 			$('#video').fadeOut(600);//css("z-index", "-1");
 			$("#stage").fadeIn(600); // maybe need to take this out
