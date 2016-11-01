@@ -494,7 +494,7 @@ function run_all_trials() {
         //}
     	video.addEventListener("timeupdate", function() {
      	 	$('#video').on('click touchstart', function(event){	
-				if (video.paused ==false){
+				if (video.paused ==false) {
 				video.pause();
 				video.currentTime = 0;
 				} else {
@@ -502,7 +502,6 @@ function run_all_trials() {
 				start_time = (new Date()).getTime();
 				video.play();
 				}
-				}, 150);
 
 			})
       	 if (this.currentTime >= current_trial['question_length']) {
