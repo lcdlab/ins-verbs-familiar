@@ -496,7 +496,12 @@ function run_all_trials() {
      	 	$('#video').on('click touchstart', function(event){	
 				video.pause();
 				video.currentTime = 0;
+				//Avoid the Promise Error
+				setTimeout(function () {      
+				start_time = (new Date()).getTime();
 				video.play();
+				}, 150);
+
 			})
       	 if (this.currentTime >= current_trial['question_length']) {
 		setTimeout(function(){
