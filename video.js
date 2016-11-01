@@ -497,7 +497,7 @@ function run_all_trials() {
 				video.pause();
 				video.currentTime = 0;
 				video.play();
-			}
+			})
       	 if (this.currentTime >= current_trial['question_length']) {
 		setTimeout(function(){
 			$('#video').fadeOut(600);//css("z-index", "-1");
