@@ -515,6 +515,9 @@ function run_all_trials() {
 
 	//When a choice is clicked, then record data and move on.
 	$('.choice').on('click touchstart', function(event){
+		if (clickDisabled === false) {
+			clickDisabled = true;
+			video.pause();
 		var response = $(this).attr('id');
 		if (response === target_side) {
 				data.accuracy = 1;
@@ -533,9 +536,7 @@ function run_all_trials() {
 		$(this).attr('src', 'images/dots/ElmoFace.png');
 			}
 		$(this).css('border', "solid 6px red");  
-		if (clickDisabled === false) {
-			clickDisabled = true;
-			video.pause();
+
 			
 			
 	
