@@ -476,7 +476,11 @@ function run_all_trials() {
 		//video.webkitEnterFullscreen();
 		start_time = (new Date()).getTime();
 		video.play();
-		
+		$('#video').on('click touchstart', function(event){	
+			video.pause();
+			video.currentTime = 0;
+			video.load();
+		}
 		if (target_side === 'left') {
 			t = $('#left');
 			f = $('#right');
