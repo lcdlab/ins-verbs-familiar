@@ -546,13 +546,14 @@ function run_all_trials() {
 			
 			t.hide();
 			f.hide();
+			document.getElementById(dotID).src = "images/dots/ElmoFace.png";
 			//$(this).attr('src', 'images/dots/ElmoFace.png');
 			//$(this).fadeIn(300);
 			}
 			} else {
 			$('#left').fadeOut(300);
 			$('#right').fadeOut(300);
-			$(this).attr('src', 'images/dots/ElmoFace.png');
+			document.getElementById(dotID).src = "images/dots/ElmoFace.png";
 			$(this).fadeIn(300);
 			}
 		//$(this).css('border', "solid 6px red");  
