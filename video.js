@@ -546,7 +546,7 @@ function run_all_trials() {
 			
 			t.hide();
 			f.hide();
-			$(this).attr('src', 'images/dots/ElmoFace.png');
+			//$(this).attr('src', 'images/dots/ElmoFace.png');
 			//$(this).fadeIn(300);
 			}
 			} else {
@@ -555,7 +555,7 @@ function run_all_trials() {
 			$(this).attr('src', 'images/dots/ElmoFace.png');
 			$(this).fadeIn(300);
 			}
-		$(this).css('border', "solid 6px red");  
+		//$(this).css('border', "solid 6px red");  
 
 			
 			
