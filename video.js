@@ -547,7 +547,7 @@ function run_all_trials() {
 			t.hide();
 			f.hide();
 			$(this).attr('src', 'images/dots/ElmoFace.png');
-			$(this).fadeIn(300);
+			//$(this).fadeIn(300);
 			}
 			} else {
 			$('#left').fadeOut(300);
