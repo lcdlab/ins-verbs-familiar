@@ -538,13 +538,13 @@ function run_all_trials() {
 				data.accuracy = 0;
 			}	
 		if (current_trial['trial_id']=='intro'){
-		if (data.accuracy == 0){
-			f.css('border', "solid 6px red");  
-			t.hide(100);			
-			}else{
-			t.css('border', "solid 6px red");  
-			f.hide(100);
-			}
+			if (data.accuracy == 0){
+				f.css('border', "solid 6px red");  
+				t.hide(100);			
+				}else{
+				t.css('border', "solid 6px red");  
+				f.hide(100);
+				}
 		
 		} else if (current_trial['trial_id']!='book_WE_feedback'){
 				if (data.accuracy == 0){
@@ -557,9 +557,10 @@ function run_all_trials() {
 				f.hide(100);
 				}
 			} else {
-
 				if (data.accuracy == 0){
-					$(this).attr('src', 'images/dots/qu_mark.png');				
+					f.attr('src', 'images/dots/qu_mark.png');
+					f.css('border', "solid 6px red");  
+					t.hide(100);			
 				} else {
 					t.attr('src', 'images/dots/ElmoFace.png');
 					t.css('border', "solid 6px red");  
