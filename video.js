@@ -546,15 +546,7 @@ function run_all_trials() {
 			f.hide(100);
 			}
 		
-		} else if (current_trial['trial_id']=='book_WE_feedback'){
-				if (data.accuracy == 0){
-					$(this).attr('src', 'images/dots/qu_mark.png');				
-				} else {
-					t.attr('src', 'images/dots/ElmoFace.png');
-					t.css('border', "solid 6px red");  
-					f.hide(100);
-				}
-			} else {
+		} else if (current_trial['trial_id']!='book_WE_feedback'){
 				if (data.accuracy == 0){
 				f.attr('src', 'images/dots/ElmoFace.png');
 				f.css('border', "solid 6px red");  
@@ -563,6 +555,15 @@ function run_all_trials() {
 				t.attr('src', 'images/dots/ElmoFace.png');
 				t.css('border', "solid 6px red");  
 				f.hide(100);
+				}
+			} else {
+
+				if (data.accuracy == 0){
+					$(this).attr('src', 'images/dots/qu_mark.png');				
+				} else {
+					t.attr('src', 'images/dots/ElmoFace.png');
+					t.css('border', "solid 6px red");  
+					f.hide(100);
 				}
 			}
 		
