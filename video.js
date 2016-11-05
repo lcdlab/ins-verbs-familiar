@@ -544,10 +544,9 @@ function run_all_trials() {
 				$(this).attr('src', 'images/dots/qu_mark.png');				
 				} else {
 			
-			t.hide();
+			
 			f.hide();
-			document.getElementById(dotID).src = "images/dots/ElmoFace.png";
-			//$(this).attr('src', 'images/dots/ElmoFace.png');
+			t.attr('src', 'images/dots/ElmoFace.png');
 			//$(this).fadeIn(300);
 			}
 			} else {
