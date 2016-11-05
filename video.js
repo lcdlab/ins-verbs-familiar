@@ -545,13 +545,19 @@ function run_all_trials() {
 				} else {
 			t.attr('src', 'images/dots/ElmoFace.png');
 			t.css('border', "solid 6px red");  
-			f.hide(300);
+			f.hide(100);
 
 			}
 			} else {
+			if (data.accuracy == 0){
+			f.attr('src', 'images/dots/ElmoFace.png');
+			f.css('border', "solid 6px red");  
+			t.hide(100);			
+			}else{
 			t.attr('src', 'images/dots/ElmoFace.png');
 			t.css('border', "solid 6px red");  
-			f.hide(300);
+			f.hide(100);
+			}
 			}
 
 			
