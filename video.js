@@ -540,31 +540,42 @@ function run_all_trials() {
 		if (current_trial['trial_id']=='intro'){
 			if (data.accuracy == 0){
 				f.css('border', "solid 6px red");  
-				t.hide(100);			
+				setTimeout(function () {      
+   					t.hide(100);
+				}, 150);			
 				}else{
 				t.css('border', "solid 6px red");  
-				f.hide(100);
+				setTimeout(function () {      
+   					f.hide(100);
+				}, 150);
 				}
 		
 		} else if (current_trial['trial_id']!='book_WE_feedback'){
 				if (data.accuracy == 0){
 				f.attr('src', 'images/dots/ElmoFace.png');
 				f.css('border', "solid 6px red");  
-				t.hide(100);			
-				}else{
+				setTimeout(function () {      
+   					t.hide(100);
+				}, 150);				}else{
 				t.attr('src', 'images/dots/ElmoFace.png');
 				t.css('border', "solid 6px red");  
-				f.hide(100);
+				setTimeout(function () {      
+   					f.hide(100);
+				}, 150);
 				}
-			} else {
+			} else if (current_trial['trial_id']=='book_WE_feedback'){
 				if (data.accuracy == 0){
 					f.attr('src', 'images/dots/qu_mark.png');
 					f.css('border', "solid 6px red");  
-					t.hide(100);			
+					setTimeout(function () {      
+						t.hide(100);
+					}, 150);			
 				} else {
 					t.attr('src', 'images/dots/ElmoFace.png');
 					t.css('border', "solid 6px red");  
-					f.hide(100);
+					setTimeout(function () {      
+						f.hide(100);
+					}, 150);
 				}
 			}
 		
