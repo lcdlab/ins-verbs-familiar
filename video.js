@@ -448,7 +448,6 @@ function close_fullscreen() {
 
 
 function run_all_trials() {
-	
 	$('#left').fadeOut(0);//.css("z-index", "99");
 	$('#right').fadeOut(0);//.css("z-index", "99");	
 	counterbalance_list = set_up_pseudo_counterbalance();
@@ -574,7 +573,7 @@ function run_all_trials() {
 			setTimeout(function(){		
 				//$('#left').fadeOut();
 				//$('#right').fadeOut();
-			    $(this).fadeOut();
+			    //$(this).fadeOut();
 
 
 				data.rt = (new Date()).getTime() - start_time - (video.duration*1000);
