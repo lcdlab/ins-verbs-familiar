@@ -539,12 +539,14 @@ function run_all_trials() {
 		
 		} else if (current_trial['trial_id']=='book_WE_feedback'){
 				if (data.accuracy == 0){
-		$(this).attr('src', 'images/dots/qu_mark.png');				
+				$(this).attr('src', 'images/dots/qu_mark.png');				
 				} else {
-		$(this).attr('src', 'images/dots/ElmoFace.png');
+			$(this).attr('src', 'images/dots/ElmoFace.png');
+			$(this).siblings().fadeOut(300);
 			}
 			} else {
 		$(this).attr('src', 'images/dots/ElmoFace.png');
+		$(this).siblings().fadeOut(300);
 			}
 		$(this).css('border', "solid 6px red");  
 
@@ -569,9 +571,9 @@ function run_all_trials() {
 				}
 			
 			setTimeout(function(){		
-				$('#left').fadeOut();
-				$('#right').fadeOut();
-			    
+				//$('#left').fadeOut();
+				//$('#right').fadeOut();
+			    $(this).fadeOut();
 
 
 				data.rt = (new Date()).getTime() - start_time - (video.duration*1000);
