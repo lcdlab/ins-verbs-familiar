@@ -544,10 +544,10 @@ function run_all_trials() {
 				$(this).attr('src', 'images/dots/qu_mark.png');				
 				} else {
 			
-			t.fadeOut(300);
-			t.fadeOut(300);
-			//$(this).attr('src', 'images/dots/ElmoFace.png');
-			//$(this).fadeIn(300);
+			t.hide();
+			t.hide();
+			$(this).attr('src', 'images/dots/ElmoFace.png');
+			$(this).fadeIn(300);
 			}
 			} else {
 			$('#left').fadeOut(300);
