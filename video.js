@@ -541,12 +541,17 @@ function run_all_trials() {
 				if (data.accuracy == 0){
 				$(this).attr('src', 'images/dots/qu_mark.png');				
 				} else {
+			
+			$('#left').fadeOut(300);
+			$('#right').fadeOut(300);
 			$(this).attr('src', 'images/dots/ElmoFace.png');
-			$(this).siblings().fadeOut(300);
+			$(this).fadeIn(300);
 			}
 			} else {
-		$(this).attr('src', 'images/dots/ElmoFace.png');
-		$(this).siblings().fadeOut(300);
+			$('#left').fadeOut(300);
+			$('#right').fadeOut(300);
+			$(this).attr('src', 'images/dots/ElmoFace.png');
+			$(this).fadeIn(300);
 			}
 		$(this).css('border', "solid 6px red");  
 
@@ -571,9 +576,8 @@ function run_all_trials() {
 				}
 			
 			setTimeout(function(){		
-				//$('#left').fadeOut();
-				//$('#right').fadeOut();
-			    //$(this).fadeOut();
+
+			    
 
 
 				data.rt = (new Date()).getTime() - start_time - (video.duration*1000);
