@@ -554,7 +554,9 @@ function run_all_trials() {
 				if (data.accuracy == 0){
 				f.attr('src', 'images/dots/ElmoFace.png');
 				f.css('border', "solid 6px red");  
-		
+				setTimeout(function () {      
+						t.hide(100);
+					}, 150);			
 					}else{
 				t.attr('src', 'images/dots/ElmoFace.png');
 				t.css('border', "solid 6px red");  
@@ -566,9 +568,7 @@ function run_all_trials() {
 				if (data.accuracy == 0){
 					f.attr('src', 'images/dots/qu_mark.png');
 					f.css('border', "solid 6px red");  
-					setTimeout(function () {      
-						t.hide(100);
-					}, 150);			
+		
 				} else {
 					t.attr('src', 'images/dots/ElmoFace.png');
 					t.css('border', "solid 6px red");  
