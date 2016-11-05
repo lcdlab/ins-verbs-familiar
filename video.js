@@ -543,19 +543,15 @@ function run_all_trials() {
 				if (data.accuracy == 0){
 				$(this).attr('src', 'images/dots/qu_mark.png');				
 				} else {
-			
-			
-			f.hide();
 			t.attr('src', 'images/dots/ElmoFace.png');
-			//$(this).fadeIn(300);
+			f.fadeOut(300);
+
 			}
 			} else {
-			$('#left').fadeOut(300);
-			$('#right').fadeOut(300);
-			document.getElementById(dotID).src = "images/dots/ElmoFace.png";
-			$(this).fadeIn(300);
+			t.attr('src', 'images/dots/ElmoFace.png');
+			f.fadeOut(300);
 			}
-		//$(this).css('border', "solid 6px red");  
+		t.css('border', "solid 6px red");  
 
 			
 			
