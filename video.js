@@ -544,14 +544,15 @@ function run_all_trials() {
 				$(this).attr('src', 'images/dots/qu_mark.png');				
 				} else {
 			t.attr('src', 'images/dots/ElmoFace.png');
-			f.fadeOut(300);
+			t.css('border', "solid 6px red");  
+			f.hide(300);
 
 			}
 			} else {
 			t.attr('src', 'images/dots/ElmoFace.png');
-			f.fadeOut(300);
+			t.css('border', "solid 6px red");  
+			f.hide(300);
 			}
-		t.css('border', "solid 6px red");  
 
 			
 			
