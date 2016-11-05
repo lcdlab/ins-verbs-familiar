@@ -448,6 +448,7 @@ function close_fullscreen() {
 
 
 function run_all_trials() {
+	
 	$('#left').fadeOut(0);//.css("z-index", "99");
 	$('#right').fadeOut(0);//.css("z-index", "99");	
 	counterbalance_list = set_up_pseudo_counterbalance();
