@@ -509,6 +509,7 @@ function run_all_trials() {
 			video.pause();
      	 	$('#video').on('click touchstart', function(event){	
 			video.play();
+			}
 		setTimeout(function(){
 			$('#video').fadeOut(600);//css("z-index", "-1");
 			$("#stage").fadeIn(600); // maybe need to take this out
