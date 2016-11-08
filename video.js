@@ -631,16 +631,16 @@ function run_all_trials() {
 				}
 			} else if (current_trial['trial_id']=='book_WE_feedback'){
 				if (data.accuracy == 0){
-					f.attr('src', 'images/dots/qu_mark.png');
+					//f.attr('src', 'images/dots/qu_mark.png');
 					f.css('border', "solid 6px red");  
 		
 				} else {
 					//t.attr('src', 'images/dots/ElmoFace.png');
 					t.effect('bounce', {'times':6, 'distance':200}, 1000);
-					t.css('border', "solid 6px red");  
-					setTimeout(function () {      
-						f.hide(100);
-					}, 150);
+					//t.css('border', "solid 6px red");  
+					//setTimeout(function () {      
+					//	f.hide(100);
+					//}, 150);
 				}
 			}
 		
