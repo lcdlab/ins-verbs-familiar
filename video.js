@@ -516,40 +516,40 @@ function run_all_trials() {
 // 						return;
 // 					}
 // 		
-			setTimeout(function(){
-					
-					$(this).css('border', "none");  
-					$('#left').css('border', "none"); ;
-					$('#right').css('border', "none"); ;
-		
-					current_trial = trials[0];
-					//console.log(current_trial);
-					// Get new trial
-					target_side = counterbalance_list[0];
-					// Get next side to use
-
-					$("#video").attr("src", current_trial["video"]);
-
-					//show_choices(current_trial, target_side);
-
-					//$('#left').hide();
-					//$('#right').hide();
-				//	$('#video').css("z-index", "-1");
-				//    $('#left').css("z-index", "99");
-				//	$('#right').css("z-index", "99");
-					
-
-
-					start_time = (new Date()).getTime();
-					$('#video').fadeIn();//css("z-index", "-1");
-					$("#stage").fadeIn();
-					clickDisabled = false
-				},
-					200);
-			},
-				200);
-				});
-
+// 			setTimeout(function(){
+// 					
+// 					$(this).css('border', "none");  
+// 					$('#left').css('border', "none"); ;
+// 					$('#right').css('border', "none"); ;
+// 		
+// 					current_trial = trials[0];
+// 					//console.log(current_trial);
+// 					// Get new trial
+// 					target_side = counterbalance_list[0];
+// 					// Get next side to use
+// 
+// 					$("#video").attr("src", current_trial["video"]);
+// 
+// 					//show_choices(current_trial, target_side);
+// 
+// 					//$('#left').hide();
+// 					//$('#right').hide();
+// 				//	$('#video').css("z-index", "-1");
+// 				//    $('#left').css("z-index", "99");
+// 				//	$('#right').css("z-index", "99");
+// 					
+// 
+// 
+// 					start_time = (new Date()).getTime();
+// 					$('#video').fadeIn();//css("z-index", "-1");
+// 					$("#stage").fadeIn();
+// 					clickDisabled = false
+// 				},
+// 					200);
+// 			},
+// 				200);
+// 				});
+/////////////////// This part not used
 //      	 	$('#video').on('click touchstart', function(event){	
 // 				if (video.paused ==false) {
 // 						setTimeout(function () {      
@@ -563,6 +563,7 @@ function run_all_trials() {
 // 				}
 // 
 // 			})
+/////////////////////////
       	 if (this.currentTime >= current_trial['question_length']) {
 		setTimeout(function(){
 			$('#video').fadeOut(600);//css("z-index", "-1");
