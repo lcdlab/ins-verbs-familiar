@@ -83,6 +83,7 @@ var results = ["subject_id",
 	"trial_type",
 	"date_stamp",
 	"time_stamp",
+	"repeats",
 	"side_chosen",
 	"accuracy",
 	'rt',
@@ -117,6 +118,8 @@ var data = {
 		//the date of the experiment
 	time_stamp: getCurrentTime(),
 		//the time that the trial was completed at 
+	repeats: 0,
+		// number of times trial repeated
 	accuracy: 0,
 		// 0 = choice did not match target
 		// 1 = choice matched target
@@ -191,6 +194,7 @@ function processOneRow() {
 	+ data.trial_type + ","
 	+ data.date_stamp + ","
 	+ data.time_stamp + ","
+	+ data.repeats + ","
 	+ data.side_chosen + ","
 	+ data.accuracy + ","
 	+ data.rt + ","
@@ -454,7 +458,7 @@ function run_all_trials() {
 	set_up_trial_list();
 	// If you run these the other way round, then trial list is edited in place and gives the wrong length
 	// for making the counterbalance list.	
-
+	var repeats = 0;
 	counter = 1;
 	number_of_trials = trials.length;
 
@@ -493,17 +497,72 @@ function run_all_trials() {
         
         //}
     	video.addEventListener("timeupdate", function() {
-     	 	$('#video').on('click touchstart', function(event){	
-				if (video.paused ==false) {
-				video.pause();
-				video.currentTime = 0;
-				} else {
-				//Avoid the Promise Error
-				start_time = (new Date()).getTime();
-				video.play();
-				}
+    		
+    		// if click the red square, restart the trial
+			$('.restart-container').on('click touchstart', function(event){
+				if (clickDisabled === false) {
+					clickDisabled = true;
+					repeats++;
+					}
+				setTimeout(function() {
+					setTimeout(function () {      
+						video.pause();
+					}, 50);	
+					$('#video').fadeOut();
+					$("#stage").fadeOut();
+					//$('#video').css("z-index", "99");
+					if (counter === number_of_trials + 1) {
+						end();
+						return;
+					}
+		
+			setTimeout(function(){
+					
+					$(this).css('border', "none");  
+					$('#left').css('border', "none"); ;
+					$('#right').css('border', "none"); ;
+		
+					current_trial = trials[0];
+					//console.log(current_trial);
+					// Get new trial
+					target_side = counterbalance_list[0];
+					// Get next side to use
 
-			})
+					$("#video").attr("src", current_trial["video"]);
+
+					//show_choices(current_trial, target_side);
+
+					//$('#left').hide();
+					//$('#right').hide();
+				//	$('#video').css("z-index", "-1");
+				//    $('#left').css("z-index", "99");
+				//	$('#right').css("z-index", "99");
+					
+
+
+					start_time = (new Date()).getTime();
+					$('#video').fadeIn();//css("z-index", "-1");
+					$("#stage").fadeIn();
+					clickDisabled = false
+				},
+					200);
+			},
+				200);
+				});
+
+//      	 	$('#video').on('click touchstart', function(event){	
+// 				if (video.paused ==false) {
+// 						setTimeout(function () {      
+// 				video.pause();
+// 				}, 50);	
+// 				video.currentTime = 0;
+// 				} else {
+// 				//Avoid the Promise Error
+// 				start_time = (new Date()).getTime();
+// 				video.play();
+// 				}
+// 
+// 			})
       	 if (this.currentTime >= current_trial['question_length']) {
 		setTimeout(function(){
 			$('#video').fadeOut(600);//css("z-index", "-1");
@@ -529,7 +588,8 @@ function run_all_trials() {
 		
 		if (clickDisabled === false) {
 			clickDisabled = true;
-			video.pause();
+	
+			
 		var dotID = $(event.currentTarget).attr('id');
 		var response = $(this).attr('id');
 		if (response === target_side) {
@@ -578,6 +638,9 @@ function run_all_trials() {
 				}
 			}
 		
+			setTimeout(function () {      
+				video.pause();
+			}, 50);		
 			
 			
 	
@@ -621,6 +684,7 @@ function run_all_trials() {
 				}
 
 				data.side_chosen = response;
+				data.repeats = repeats;
 
 				processOneRow();
 				upload_to_dropbox();
@@ -652,6 +716,7 @@ function run_all_trials() {
 			    
 							current_trial = trials[0];
 							console.log(current_trial);
+							repeats = 0;
 							// Get new trial
 							target_side = counterbalance_list[0];
 							// Get next side to use
