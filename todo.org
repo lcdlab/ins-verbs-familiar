@@ -1,0 +1,17 @@
+* Slides
+
+** get_data
+
+** click to begin trials
+
+** trial stage
+
+  - displays the video
+
+  - click to play it
+
+  - once it has been clicked, disable clicking
+
+  - once timer has reached the part of video where question is asked...
+    - fade in the pictures
+    - enable clicking

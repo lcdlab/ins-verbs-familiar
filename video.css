@@ -1,0 +1,131 @@
+body {
+	margin: 0;
+	font-size: 14px;
+	line-height: 15px;
+}
+
+#top_container {
+	height:260px;
+	top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+	/*background-color: lightgrey;
+	z-index:-2;*/
+}
+
+#video {
+    position:absolute;
+	margin-top: 90px;
+	left: 0px;/*192px;*/
+
+	height: 576px;/*360px;*/
+	width: 1024px;/*640px;*/
+	z-index:10;
+}
+
+#play_button {
+	margin-top:100px;
+	width:200px;
+}
+
+#options_container {
+	bottom: 0;
+}
+
+#left {
+	position:relative;
+	float: left;
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 320px;
+	height: 320px;
+}
+
+#right {
+	position:relative;
+	float:right;
+	margin-top: 5px;
+	margin-right: 5px;
+	width: 320px;
+	height: 320px;
+}
+
+.col-xs-6 {
+	padding-top: 150px;
+	padding-left: 70px;
+}
+	
+.col-xs-4 {
+	padding-top: 200px;
+	height: 100%;
+	background: #041E42;
+}
+
+.btn {
+	background: #041E42;
+	color: white;
+	border-radius: 0;
+}
+
+.form-control {
+	width:auto;
+	display:inline-block;
+	border-radius: 0;
+}
+
+.input-group {
+	width: 357px;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn:active, .btn:hover{
+	background: #041E42;
+	color: white;
+}
+
+.slide {
+	width: 100%;
+	height: 100%;
+	display: none;
+	position: absolute;
+	background-color: white;
+}
+
+.slide1 {
+	width: 100%;
+	height: 100%;
+	display: none;
+	position: absolute;
+	background-color: lightgrey;
+}
+
+.button-container {
+	width:50%;
+	height:50%;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.restart-container {
+	width:100%;
+	height:20%;
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	transform: translate(-50%, -50%);
+}
+
+
+.btn-contained {
+	font-size: 20px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 100px;
+	transform: translate(-50%, -50%);	
+}
+
