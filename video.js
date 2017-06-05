@@ -31,19 +31,42 @@ var video = document.getElementById('video');
 // This will play the video in fullscreen when started.
 
 
-var image_assets = ["images/dots/dot_1.png",
-	"images/dots/dot_2.png",
-	"images/dots/dot_3.png",
-	"images/dots/dot_4.png",
-	"images/dots/dot_5.png",
-	"images/dots/dot_6.png",
-	"images/dots/dot_7.png",
-	"images/dots/dot_8.png",
-	"images/dots/dot_9.png",
-	"images/dots/dot_10.png",
-	"images/dots/x.png",
+// var image_assets = ["images/dots/dot_1.png",
+// 	"images/dots/dot_2.png",
+// 	"images/dots/dot_3.png",
+// 	"images/dots/dot_4.png",
+// 	"images/dots/dot_5.png",
+// 	"images/dots/dot_6.png",
+// 	"images/dots/dot_7.png",
+// 	"images/dots/dot_8.png",
+// 	"images/dots/dot_9.png",
+// 	"images/dots/dot_10.png",
+// 	"images/dots/x.png",
+// 	];
+
+var image_assets = ["images/paired/airplane.png",
+	"images/paired/balloon.png",
+	"images/paired/bee.png",
+	"images/paired/bike.png",
+	"images/paired/bird.png",
+	"images/paired/butterfly.png",
+	"images/paired/car.png",
+	"images/paired/chair.png",
+	"images/paired/cloud1.png",
+	"images/paired/dog.png",
+	"images/paired/eye.png",
+	"images/paired/fish.png",
+	"images/paired/flag.png",
+	"images/paired/flower.png",
+	"images/paired/foot-clipart-foot-hi.png",
+	"images/paired/hat.png",
+	"images/paired/helicopter1.png",
+	"images/paired/mouse.png",
+	"images/paired/shoe.png",
+	"images/paired/truck.png",
 	];
-// used later to preload the dots and stuff.
+
+// used later to preload the pairs and stuff.
 
 image_uris = new Array();
 
@@ -213,15 +236,17 @@ function processOneRow() {
 	results += dataforRound;	
 }
 
-function createDot(dotx, doty, i) {
+function createPair(pairx, pairy, i) {
 
-	var dot = document.createElement("img");
+	var pair = document.createElement("img");
 
-	dot.setAttribute("class", "dot");
+	pair.setAttribute("class", "pair");
 
-	dot.id = "dot_" + i;
+	pair.id = "pair_" + i;
 
-	dot.src = "images/dots/dot_" + i + ".png";
+	//pair.src = "images/paired/pair_" + i + ".png";
+
+	pair.src = image_assets[i];
 	
 
 	var x = Math.floor(Math.random()*750);
@@ -229,75 +254,75 @@ function createDot(dotx, doty, i) {
 
 	var invalid = "true";
 
-	//make sure dots do not overlap
+	//make sure paired image assets do not overlap
 	while (true) {
 		invalid = "true";
-		for (j = 0; j < dotx.length ; j++) {
-			if (Math.abs(dotx[j] - x) + Math.abs(doty[j] - y) < 250) {
+		for (j = 0; j < pair.length ; j++) {
+			if (Math.abs(pairx[j] - x) + Math.abs(pairy[j] - y) < 250) {
 				var invalid = "false";
 				break; 
 			}
 		}
 		if (invalid === "true") {
-			dotx.push(x);
-			doty.push(y);
+			pairx.push(x);
+			pairy.push(y);
 			break;	
 		}
 		x = Math.floor(Math.random()*400);
 		y = Math.floor(Math.random()*400);
 	}
 
-	dot.setAttribute("style","position:absolute;left:"+x+"px;top:"+y+"px;");
-	training.appendChild(dot);
+	pair.setAttribute("style","position:absolute;left:"+x+"px;top:"+y+"px;");
+	training.appendChild(pair);
 }
-// This adds a dot to the screen. Called during training.
+// This adds an image from image file "paired" to the screen. Called during training.
 
-function do_training(dotgame) {
-	var allDots = ["dot_1", "dot_2", "dot_3", "dot_4", "dot_5", 
-					"dot_6", "dot_7", "dot_8", 
-					"dot_9", "dot_10"];
+function do_training(pairgame) {
+	//var allDots = ["dot_1", "dot_2", "dot_3", "dot_4", "dot_5", 
+		//			"dot_6", "dot_7", "dot_8", 
+		//			"dot_9", "dot_10"];
 	
 	xcounter = 0;
-	var dotCount = 5;
+	var pairCount = 10;
 
-	var dotx = [];
-	var doty = [];
+	var pairx = [];
+	var pairy = [];
 
-	if (dotgame === 0) {
-		for (i = 0; i < 5; i++) {
-			createDot(dotx, doty, i+1);
+	if (pairgame === 0) {
+		for (i = 0; i < 10; i++) {
+			createPair(pairx, pairy, i);
 		}
 	} else {
-		for (i = 5; i < 10; i++) {
-			createDot(dotx, doty, i+1);
+		for (i = 10; i < 20; i++) {
+			createPair(pairx, pairy, i);
 		}
 	}
 	showSlide("training");
 
-	$('.dot').bind('click touchstart', function(event) {
-		var dotID = $(event.currentTarget).attr('id');
+	$('.pair').bind('click touchstart', function(event) {
+		var pairID = $(event.currentTarget).attr('id');
 
-		//only count towards completion clicks on dots that have not yet been clicked
-		if (allDots.indexOf(dotID) === -1) {
+		//only count towards completion clicks on pairs that have not yet been clicked
+		if (image_assets.indexOf(pairID) === -1) {
 			return;
 		}
-		allDots.splice(allDots.indexOf(dotID), 1);
-		document.getElementById(dotID).src = "images/dots/x.png";
+		image_assets.splice(image_assets.indexOf(pairID), 1);
+		document.getElementById(pairID).src = "images/dots/x.png";
 		
 		xcounter++
 		
-		if (xcounter === dotCount) {
+		if (xcounter === pairCount) {
 			setTimeout(function () {
 				$("#training").hide();
-				if (dotgame === 0) {		
+				if (pairgame === 0) {		
 					//hide old x marks before game begins again
-					var dotID;
-					for (i = 1; i <= dotCount; i++) {
-						dotID = "dot_" + i;
-						training.removeChild(document.getElementById(dotID));
+					var pairID;
+					for (i = 1; i <= pairCount; i++) {
+						pairID = "pair_" + i;
+						training.removeChild(document.getElementById(pairID));
 					}
 					do_training();
-					dotgame++; 
+					pairgame++; 
 				} else {
 					//document.body.style.background = "black";
 					setTimeout(function() {
@@ -311,7 +336,7 @@ function do_training(dotgame) {
 }
 // Does several things:
 // Update data variable with subject data from welcome screen.
-// Display the dots and plays the dot game.
+// Display the pairs and plays the pair game.
 // When done, shows the "confirm" slide that has a "Begin!" button
 // to start running the trials.
 
@@ -349,7 +374,7 @@ function confirm() {
 		run_all_trials();
 	}, normalpause);
 }
-// Called when clicking on "Begin!" after the dot game
+// Called when clicking on "Begin!" after the pair game
 
 function end() {
 	setTimeout(function () {
@@ -591,7 +616,7 @@ function run_all_trials() {
 			clickDisabled = true;
 	
 			
-		var dotID = $(event.currentTarget).attr('id');
+		var pairID = $(event.currentTarget).attr('id');
 		var response = $(this).attr('id');
 		if (response === target_side) {
 				data.accuracy = 1;
