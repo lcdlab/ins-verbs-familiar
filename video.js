@@ -47,11 +47,7 @@ var video = document.getElementById('video');
 var image_assets = ["images/paired/airplane.png",
 	"images/paired/balloon.png",
 	"images/paired/bee.png",
-<<<<<<< HEAD
 	"images/paired/bike.png",
-=======
-	"images/paired/bike.png",
->>>>>>> ed009860e0b5a871b38a0b5c2935f3040075fec9
 	"images/paired/bird.png",
 	"images/paired/butterfly.png",
 	"images/paired/car.png",
